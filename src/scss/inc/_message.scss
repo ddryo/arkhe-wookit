@@ -1,0 +1,25 @@
+// メッセージ
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.1);
+
+	&::before {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+
+}
+
+.woocommerce .woocommerce-notices-wrapper {
+
+	.button {
+		order: 1;
+		float: none;
+		margin-left: auto;
+	}
+}

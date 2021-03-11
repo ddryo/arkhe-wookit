@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+// mixin
+@import "mixin/**";
+
+// ディスカウント
+.cart-discount td {
+	color: #ef6b1c; // セール価格と同じ色
+}
+
+.cart-discount .amount {
+	margin: 0 8px 0 2px;
+}
+
+.woocommerce-cart {
+
+	// .c-postContent {
+	// 	margin-top: 0;
+	// }
+
+	.woocommerce-cart-form {
+
+		table.cart img {
+			width: 40px;
+		}
+	}
+
+	.button[name="update_cart"]{
+
+	}
+	// table.cart td.actions
+	.button[name="update_cart"],
+	.button[name="apply_coupon"] {
+		padding: 0.75em 1em !important;
+		// font-size: 1rem;
+		// line-height: 1;
+	}
+
+	@include woo_pc {
+
+
+		td.product-remove {
+			width: 2rem;
+		}
+		// クーポン
+		.cart .actions .coupon {
+			display: flex;
+			align-items: center;
+
+			.input-text[name="coupon_code"] {
+				width: 200px !important;
+				margin-right: 0.5rem;
+				padding: 0.5em;
+				font-size: 1rem;
+				line-height: 1;
+			}
+		}
+
+
+	}
+}
+
+
+.order-total + .recurring-totals {
+
+	th {
+
+		@include woo_sp {
+			display: block !important;
+			width: 100% !important;
+		}
+	}
+}
+
+// @include woo_sp {}
+
+
+// 削除ボタン
+.woocommerce a.remove {
+	box-sizing: content-box;
+	padding: 4px;
+	font-size: 1rem;
+}
+
+// 「カートの合計」
+.cart_totals {
+
+	h2 {
+		margin-bottom: 1rem;
+	}
+}
+
+

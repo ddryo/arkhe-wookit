@@ -1,0 +1,92 @@
+// 商品検索
+// .widget_product_search {}
+
+// 商品カテゴリーリスト
+.product-categories {
+	border-top: solid 1px var(--ark-color_border);
+
+	li {
+		position: relative;
+		margin: 0 !important;
+	}
+
+	a {
+		position: relative;
+		display: block;
+		padding: var(--ark-nav-padding, 0.75rem 0.5rem);
+		color: inherit;
+		text-decoration: none;
+		border-bottom: solid 1px var(--ark-color_border);
+		transition: background-color 0.25s;
+
+		&:hover {
+			background-color: var(--ark-hover_gray);
+		}
+	}
+
+	.children {
+		position: relative;
+		height: 0;
+		margin: 0;
+		overflow: hidden;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.25s;
+
+
+		&.is-opened {
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		a {
+			padding-left: 1.5rem;
+			font-size: 0.9em;
+		}
+	}
+}
+
+// 商品リスト
+.product_list_widget {
+	border-top: solid 1px var(--ark-color_border);
+
+	.woo-productList {
+		position: relative;
+		margin: 0 !important;
+		padding: 0 !important;
+		border-bottom: solid 1px var(--ark-color_border);
+		transition: background-color 0.25s;
+
+		&:hover {
+			background-color: var(--ark-hover_gray);
+		}
+
+		.woo-productList__a {
+			display: flex;
+			align-items: center;
+			padding: 0.75rem 0.5rem;
+			color: inherit;
+			font-weight: 400;
+			text-decoration: none;
+		}
+	}
+
+	.product-title {
+		display: block;
+		font-weight: 700;
+	}
+
+}
+
+
+.product_list_widget .woo-productList .woo-productList__a img {
+	float: none;
+	width: 40px;
+	margin-right: 12px;
+	margin-left: 0;
+}
+
+.product_list_widget .woo-productList .woocommerce-placeholder {
+	border: solid 1px #dedede;
+}

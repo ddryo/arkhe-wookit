@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+// mixin
+@import "mixin/**";
+
+// 決済方法エリア
+@import "inc/payment";
+
+.woocommerce-Input {
+	padding: 0.5em;
+
+	.show-password-input {
+		top: 0.5em;
+	}
+}
+
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+	top: 0.5em;
+}
+
+.woocommerce-MyAccount-content {
+
+	fieldset {
+		margin: 1.5rem 0;
+		padding: 1.5rem;
+		border: solid 1px;
+	}
+
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	p + p {
+		margin-top: 1rem;
+	}
+
+	table.my_account_orders {
+		font-size: 0.9em;
+
+		th {
+			padding: 0.75em 1em;
+		}
+	}
+
+	.shop_table.subscription_details {
+
+		.button {
+			margin-right: 8px;
+		}
+	}
+
+	.u-columns.addresses {
+		margin-top: 2rem;
+	}
+
+	.woocommerce-Addresses {
+
+		h3 {
+			margin-top: 0 !important;
+			font-size: 1.25rem;
+		}
+
+		address {
+			margin-top: 0.5rem;
+		}
+
+		.edit {
+			margin: 0 4px;
+		}
+	}
+
+	.shop_table.order_details {
+
+		.wcs-switch-link {
+			margin-left: 1rem;
+		}
+	}
+}
+
+
+// ナビゲーション
+.woocommerce-MyAccount-navigation {
+
+	@include woo_pc {
+		padding-right: 1.5rem;
+	}
+
+	@include woo_sp {
+		margin-bottom: 2rem;
+	}
+
+
+	ul {
+		padding-left: 0 !important;
+		list-style: none !important;
+	}
+
+	li {
+		margin: 0 !important;
+	}
+
+	& > ul {
+
+		border-top: 1px solid var(--ark-woo_color_border);
+
+		@include woo_sp {
+			display: flex;
+			flex-wrap: wrap;
+			border-right: 1px solid var(--ark-woo_color_border);
+
+			& > .woocommerce-MyAccount-navigation-link {
+				width: 50%;
+				font-size: 0.9rem;
+				border-left: 1px solid var(--ark-woo_color_border);
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-navigation-link {
+
+
+		a {
+			display: block;
+			padding: 0.75em 0.5em;
+			text-decoration: none;
+
+			// &:hover {
+			text-decoration: none;
+			border-bottom: 1px solid var(--ark-woo_color_border);
+
+			@include woo_sp {
+				padding: 0.75em 0.5em;
+			}
+			// }
+		}
+
+		&.is-active > a,
+		&:hover > a {
+			background: rgba(100, 100, 100, 0.05);
+		}
+
+		&.is-active > a {
+			font-weight: bold;
+		}
+	}
+}

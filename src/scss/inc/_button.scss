@@ -1,0 +1,29 @@
+
+// ダウンロードボタン
+.woocommerce td.download-file {
+	font-size: 0.9em;
+}
+
+
+// 薄い色のボタン
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	padding: 0.75em 1em;
+}
+
+// 購入ボタン
+.woocommerce div.product form.cart .button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	// background-color: #a46497;
+	background-color: var(--ark-color_main);
+
+	&:hover {
+		background-color: var(--ark-color_main);
+		opacity: 0.75;
+	}
+}

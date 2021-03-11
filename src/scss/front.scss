@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+// mixin
+@import "mixin/**";
+
+:root {
+	--ark-woo_color_btn: #333;
+	--ark-woo_color_border: #dedede;
+}
+
+
+@import "inc/button";
+@import "inc/shop_table";
+@import "inc/message";
+@import "inc/product_page";
+@import "inc/widget";
+@import "inc/pagination";
+
+
+// ロゴデカくなる問題を修正
+.woocommerce .c-headLogo__img,
+.woocommerce-page .c-headLogo__img {
+	height: 100%;
+}
+
+
+// セールマーク
+.woocommerce span.onsale {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 4em;
+	min-height: 4em;
+	padding: 0;
+	font-size: 0.8em;
+	background: linear-gradient(135deg, #ff8e3c, #ff3939);
+}
+
+
+// inputフィールド
+.woocommerce .input-text {
+	padding: 0.5em;
+}
+
+
+// カートの「継続課金」部分の調整
+.order-total + .recurring-totals {
+
+	th {
+		background: var(--ark-color_gray);
+	}
+}
+
+// チェックボックス
+label.checkbox {
+	cursor: pointer;
+}
+

@@ -1,0 +1,20 @@
+// .shop_table テーブル : カートや注文履歴など
+.woocommerce {
+
+	table.shop_table {
+
+		td,
+		th {
+			border-left: none;
+		}
+
+		td {
+			padding: 0.75em 1em;
+			line-height: 1.5;
+
+			&.actions {
+				padding: 1em 1em;
+			}
+		}
+	}
+}

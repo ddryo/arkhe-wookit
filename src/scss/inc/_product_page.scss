@@ -1,0 +1,81 @@
+// 商品タイトル
+.product_title.entry-title {
+	font-size: 1.5rem;
+}
+
+// 商品ページ
+.entry-summary {
+
+	& + section {
+		clear: both;
+	}
+
+	.price {
+		margin: 0.5rem 0;
+
+		& > del {
+			margin-right: 0.5em;
+			font-size: 0.9em;
+		}
+
+		& > ins {
+			color: #ef6b1c;
+			font-size: 1.1em;
+			text-decoration: none;
+		}
+
+	}
+
+	.woocommerce-product-details__short-description {
+		margin: 0.5rem 0;
+	}
+
+	.cart {
+		margin-top: 1rem;
+	}
+
+	.woocommerce-variation-price {
+		margin: 0.5rem 0;
+	}
+
+	.woocommerce-variation-add-to-cart {
+		margin-top: 1rem;
+	}
+
+	.product_meta {
+		font-size: 0.9rem;
+
+		& > span {
+			display: block;
+		}
+	}
+}
+
+// バリエーションのある定期購入で表示される「最低価格」を消す
+.product-type-variable-subscription .product_title + .price {
+	display: none;
+}
+
+
+// 商品ページ下部の調整
+.woocommerce-tabs h2,
+section.products h2 {
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+
+}
+
+.woocommerce-Tabs-panel--description {
+
+	& > * {
+		margin-top: 1em;
+	}
+}
+
+ul.products {
+
+	.woocommerce-loop-product__title {
+		margin-bottom: 0.5rem;
+		padding: 0;
+	}
+}

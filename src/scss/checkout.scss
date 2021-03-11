@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+// mixin
+@import "mixin/**";
+
+// 決済方法エリア
+@import "inc/payment";
+
+
+// 決済完了
+.woocommerce-order {
+
+	.woocommerce-thankyou-order-received {
+		margin-bottom: 1em;
+	}
+
+	ul.order_details {
+		padding: 1rem;
+		border: solid 1px #dedede;
+
+		@include woo_sp {
+			padding: 0.25rem 1rem;
+		}
+
+		li {
+			font-size: 0.75em;
+			line-height: 1.25;
+
+			@include woo_sp {
+				float: none;
+				margin: 0;
+				padding: 1em 0.5em 0.75em;
+				border-right: none;
+				border-bottom: 1px dashed #d3ced2;
+			}
+		}
+	}
+
+	section h2,
+	section header {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+}
