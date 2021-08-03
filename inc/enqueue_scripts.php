@@ -14,15 +14,15 @@ add_action( 'wp_enqueue_scripts', '\Arkhe_Woo\enqueue_front_scripts', 20 );
  * フロントで読み込むファイル
  */
 function enqueue_front_scripts() {
-	wp_enqueue_style( 'arkhe-woo-front', ARKHE_WOO_URL . 'dist/css/front.css', [], ARKHE_WOO_VERSION );
+	wp_enqueue_style( 'arkhe-woo-front', ARKHE_WOO_URL . 'dist/css/front.css', [], ARKHE_WOO_VER );
 
 	// Wooのページごとに読み込むファイル
 	if ( is_cart() ) {
-		wp_enqueue_style( 'arkhe-woo-cart', ARKHE_WOO_URL . 'dist/css/cart.css', [], ARKHE_WOO_VERSION );
+		wp_enqueue_style( 'arkhe-woo-cart', ARKHE_WOO_URL . 'dist/css/cart.css', [], ARKHE_WOO_VER );
 	} elseif ( is_checkout() ) {
-		wp_enqueue_style( 'arkhe-woo-checkout', ARKHE_WOO_URL . 'dist/css/checkout.css', [], ARKHE_WOO_VERSION );
+		wp_enqueue_style( 'arkhe-woo-checkout', ARKHE_WOO_URL . 'dist/css/checkout.css', [], ARKHE_WOO_VER );
 	} elseif ( is_account_page() ) {
-		wp_enqueue_style( 'arkhe-woo-mypage', ARKHE_WOO_URL . 'dist/css/mypage.css', [], ARKHE_WOO_VERSION );
+		wp_enqueue_style( 'arkhe-woo-mypage', ARKHE_WOO_URL . 'dist/css/mypage.css', [], ARKHE_WOO_VER );
 	}
 	// elseif ( is_shop() || is_product_taxonomy() ) {
 
@@ -41,7 +41,7 @@ function enqueue_admin_scripts( $hook_suffix ) {
 
 	// Arkhe設定ページのみ
 	// if ( $is_arkhe_page ) {
-		wp_enqueue_style( 'arkhe-woo-admin', ARKHE_WOO_URL . 'dist/css/admin.css', [], ARKHE_WOO_VERSION );
-	// 	wp_enqueue_script( 'arkhe-woo-admin', ARKHE_WOO_URL . 'dist/js/admin.js', ['jquery' ], ARKHE_WOO_VERSION, true );
+		wp_enqueue_style( 'arkhe-woo-admin', ARKHE_WOO_URL . 'dist/css/admin.css', [], ARKHE_WOO_VER );
+	// 	wp_enqueue_script( 'arkhe-woo-admin', ARKHE_WOO_URL . 'dist/js/admin.js', ['jquery' ], ARKHE_WOO_VER, true );
 	// }
 }

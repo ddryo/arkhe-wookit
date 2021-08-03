@@ -47,9 +47,9 @@ add_filter( 'wc_get_template', function( $template, $template_name ) {
 /**
  * Arkheのサイドバーファイルを上書き
  */
-add_filter( 'arkhe_pre_get_part__sidebar', function( $path ) {
+add_action( 'arkhe_pre_get_part__sidebar', function() {
 	\Arkhe::$ex_parts_path = ARKHE_WOO_PATH;
 } );
-add_filter( 'arkhe_did_get_part__sidebar', function() {
+add_action( 'arkhe_did_get_part__sidebar', function() {
 	\Arkhe::$ex_parts_path = '';
 } );

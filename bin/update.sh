@@ -1,6 +1,6 @@
 #!/bin/bashx
 
-#使い方 : $ bash ./bin/update.sh 0-2-1
+#使い方 : $ bash ./bin/update.sh 0-2-2
 
 #引数 : プラグインのバージョン
 version=$1
@@ -15,4 +15,4 @@ zip -r arkhe-wookit.zip arkhe-wookit -x  "*/.*" "*/__*" "*/bin*" "*/node_modules
 zip --delete arkhe-wookit.zip  "arkhe-wookit/composer*" "arkhe-wookit/webpack*" "arkhe-wookit/package*"
 
 #zipファイルを移動
-mv arkhe-wookit.zip ./_version/arkhe-wookit/arkhe-wookit-${version}.zip
+mv arkhe-wookit.zip ./arkhe-cdn/arkhe-wookit-${version}.zip

@@ -3,7 +3,7 @@
  * Plugin Name: Arkhe Wookit
  * Plugin URI: https://arkhe-theme.com/
  * Description: Plugin to make Arkhe compatible with WooCommerce.
- * Version: 0.2.1
+ * Version: 0.2.2
  * Author: LOOS,Inc.
  * Author URI: https://loos.co.jp/
  * License: GPL2 or later
@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * 定数定義
  */
-define( 'ARKHE_WOO_VERSION', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? date_i18n( 'mdGis' ) : '0.2.1' );
+define( 'ARKHE_WOO_VER', ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? wp_date( 'mdGis' ) : '0.2.2' );
 define( 'ARKHE_WOO_URL', plugins_url( '/', __FILE__ ) );
 define( 'ARKHE_WOO_PATH', plugin_dir_path( __FILE__ ) );
 

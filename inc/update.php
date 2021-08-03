@@ -5,15 +5,12 @@
 defined( 'ABSPATH' ) || exit;
 
 add_action( 'after_setup_theme', function() {
-	if ( ! class_exists( 'Arkhe' ) ) return;
-	if ( ! \Arkhe::$has_pro_licence || ! \Arkhe::$ex_update_path ) return;
-
 	if ( ! class_exists( '\Puc_v4_Factory' ) ) {
 		require_once ARKHE_WOO_PATH . 'inc/update/plugin-update-checker.php';
 	}
 	if ( class_exists( '\Puc_v4_Factory' ) ) {
 		\Puc_v4_Factory::buildUpdateChecker(
-			\Arkhe::$ex_update_path . 'arkhe-wookit.json',
+			'https://looscdn.com/cdn/arkhe/update/arkhe-wookit-k7df20.json',
 			ARKHE_WOO_PATH . 'arkhe-wookit.php',
 			'arkhe-wookit'
 		);
